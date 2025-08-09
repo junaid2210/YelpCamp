@@ -1,0 +1,17 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body>
+    <h1><%=campground.title%></h1>
+    <h2>Location: <%=campground.location%></h2>
+    <a href="/campgrounds/<%=campground._id%>/edit">Edit Campground</a>
+    <a href="/campgrounds">All Campgrounds</a>
+
+    <form action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST" onsubmit="return confirm('Are you sure you want to delete this campground?');">
+        <button>DELETE</button>
+    </form>
+</body>
+</html>
