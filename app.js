@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 app.get('/', (req,res) => {
-    res.send('Welcome to the campgrounds')
+    res.render('home');
 })
 
 app.get('/campgrounds', async(req,res) => {
